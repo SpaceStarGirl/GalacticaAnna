@@ -202,9 +202,9 @@ namespace GalacticaAnna
 
             foreach(var Planet in sun.planetList)
             {
+                Console.WriteLine($"Id: {Planet.Id}\n" + $"Name: {Planet.Name}\n" + $"Type: {Planet.Type}");
                 foreach(var Moon in Planet.moonList)
                 {
-                    Console.WriteLine($"Id: {Planet.Id}\n" + $"Name: {Planet.Name}\n" + $"Type: {Planet.Type}");
                     Console.WriteLine($"\tId: {Moon.Id}\n" + $"\tName: {Moon.Name}\n" + $"\tType: {Moon.Type}");
                 }
             }
