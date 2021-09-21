@@ -1,7 +1,5 @@
 ﻿using System;
 using static GalacticaAnna.SpaceObjects;
-using System.Collections.Generic;
-using static GalacticaAnna.Planet;
 
 namespace GalacticaAnna
 {
@@ -202,7 +200,7 @@ namespace GalacticaAnna
 
             foreach(var Planet in sun.planetList)
             {
-                Console.WriteLine($"Id: {Planet.Id}\n" + $"Name: {Planet.Name}\n" + $"Type: {Planet.Type}");
+                Console.WriteLine($"Id: {Planet.Id}\n" + $"Name: {Planet.Name}\n" + $"Type: {Planet.Type}\n" + $"Diameter i meter: {Planet.Diameter}");
                 foreach(var Moon in Planet.moonList)
                 {
                     Console.WriteLine($"\tId: {Moon.Id}\n" + $"\tName: {Moon.Name}\n" + $"\tType: {Moon.Type}");
