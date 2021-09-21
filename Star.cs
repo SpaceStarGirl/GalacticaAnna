@@ -16,6 +16,7 @@ namespace GalacticaAnna
 
         public new Position position { get; }
         public Star()
+       
         { this.position = new Position(0, 0);
         
         }
