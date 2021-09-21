@@ -8,12 +8,6 @@ namespace GalacticaAnna
     class Program
     {
 
-
-        /* private static Position GetPosition(Position position)
-{
-    return position;
-}*/
-
         static void Main(string[] args)
         {
             Star sun = new Star()
