@@ -57,7 +57,7 @@ namespace GalacticaAnna
             };
             Planet mars = new Planet()
             {
-                Id = 3,
+                Id = 4,
                 Name = "Mars",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -67,7 +67,7 @@ namespace GalacticaAnna
             };
             Planet jupiter = new Planet()
             {
-                Id = 3,
+                Id = 5,
                 Name = "Jupiter",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -78,7 +78,7 @@ namespace GalacticaAnna
             };
             Planet saturn = new Planet()
             {
-                Id = 3,
+                Id = 6,
                 Name = "Saturn",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -88,7 +88,7 @@ namespace GalacticaAnna
             };
             Planet uranus = new Planet()
             {
-                Id = 3,
+                Id = 7,
                 Name = "Uranus",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -98,7 +98,7 @@ namespace GalacticaAnna
             };
             Planet neptune = new Planet()
             {
-                Id = 3,
+                Id = 8,
                 Name = "Neptune",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -119,7 +119,7 @@ namespace GalacticaAnna
             };
             Moon titan = new Moon()
             {
-                Id = 1,
+                Id = 2,
                 Name = "Titan",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -129,7 +129,7 @@ namespace GalacticaAnna
             };
             Moon phobos = new Moon()
             {
-                Id = 1,
+                Id = 3,
                 Name = "Phobos",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -139,7 +139,7 @@ namespace GalacticaAnna
             };
             Moon europe = new Moon()
             {
-                Id = 1,
+                Id = 4,
                 Name = "Europe",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -149,7 +149,7 @@ namespace GalacticaAnna
             };
             Moon deimos = new Moon()
             {
-                Id = 1,
+                Id = 5,
                 Name = "Deimos",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -159,7 +159,7 @@ namespace GalacticaAnna
             };
             Moon ganymedes = new Moon()
             {
-                Id = 1,
+                Id = 6,
                 Name = "Ganymedes",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -169,7 +169,7 @@ namespace GalacticaAnna
             };
             Moon io = new Moon()
             {
-                Id = 1,
+                Id = 7,
                 Name = "Io",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -179,7 +179,7 @@ namespace GalacticaAnna
             };
             Moon mimas = new Moon()
             {
-                Id = 1,
+                Id = 8,
                 Name = "Mimas",
                 position = (new SpaceObjects.Position() { X = 0, Y = 0 }),
                 Type = PlanetType.Terrestial,
@@ -208,7 +208,11 @@ namespace GalacticaAnna
 
             foreach(var Planet in sun.planetList)
             {
-                Console.WriteLine($"Id: {Planet.Id}\n" + $"Name: {Planet.Name}\n" + $"Type: {Planet.Type}");
+                foreach(var Moon in Planet.moonList)
+                {
+                    Console.WriteLine($"Id: {Planet.Id}\n" + $"Name: {Planet.Name}\n" + $"Type: {Planet.Type}");
+                    Console.WriteLine($"\tId: {Moon.Id}\n" + $"\tName: {Moon.Name}\n" + $"\tType: {Moon.Type}");
+                }
             }
         }
     }
